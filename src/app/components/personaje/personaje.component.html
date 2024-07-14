@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Información del personaje</h1>
+@if(personaje){
+<mat-dialog-content class="matdialog">
+  <mat-card class="card">
+    <mat-card-title class="title">{{ personaje.name }}</mat-card-title>
+    <mat-card-subtitle>{{ personaje.species }}</mat-card-subtitle>
+
+    <img mat-card-image class="image" [src]="personaje.image" alt="" />
+    <mat-card-content>
+      <ul class="text">
+        <li>Origen: {{ personaje.origin.name }}</li>
+        <li>Status: {{ personaje.status }}</li>
+        <li>Locación: {{ personaje.location.name }}</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+}@else {
+<mat-spinner></mat-spinner>
+}

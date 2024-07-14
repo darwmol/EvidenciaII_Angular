@@ -1,0 +1,18 @@
+
+
+<h1 class="title1">Rick and Morty</h1>
+@for (personaje of listaPersonajes.results; track $index) {
+<mat-card class="card" (click)="openDialog(personaje.id)">
+  <mat-card-header>
+   
+    
+  </mat-card-header>
+  
+  <img mat-card-image class="image" [src]="personaje.image" alt="" />
+  <mat-card-subtitle>{{ personaje.species }}</mat-card-subtitle>
+  <mat-card-title class="title">{{ personaje.name }}</mat-card-title>
+  <mat-card-content>
+   
+  </mat-card-content>
+</mat-card>
+}
